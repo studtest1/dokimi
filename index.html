@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>De me vlepw na koimamai</title>
+    <title></title>
 
 
 <style>
@@ -12,16 +12,16 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 body {
-	background-image: url(images/δέντρα.jpg);
+	background-image: url(δέντρα.jpg);
   background-size: cover;
-	background-attachment: fixed;
+	
 	color: #fff;
-	font-size: xxx-large;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 18px;
 	font-weight: 300;
 	line-height: 140%;
-	margin: 0;
 	height: 100%;
-	padding: 0;
+	
 	width: 100%;
     animation: change_bg_image 10s step-start infinite;
    
@@ -48,11 +48,12 @@ a,
 /* MENU CONTAINER ----- */
 	.side_menu {
 		background: rgba(240, 181, 72, 0.479);
-		height:600vh;
+		height: 100vh;
 		left: -250px;
 		position: fixed;
 		top: 0;
 		width: 250px;
+        animation: change_nav_bar 10s step-start infinite;
 	}
 	.side_menu .container {
 		padding: 0 1em;
@@ -67,10 +68,10 @@ a,
 	.burger_box a.menu-icon {
 		display: inline-block;
 		float: none;
-		height: 250px;
+		height: 25px;
 		padding: 10px;
 		opacity: .5;
-		width: 250px;
+		width: 25px;
 		z-index: 100;
 	}
 	.burger_box a.menu-icon:hover,
@@ -82,18 +83,19 @@ a,
 	}
 	.burger_box .menu-icon_box {
 		display: inline-block;
-		height: 25px;
+		height: 80px;
 		position: relative;
 		text-align: left;
-		width: 25px;
+		width: 30px;
 	}
 	.burger_box .menu-icon_line {
-		background: #ec6104;
+		background: #f00a0a;
 		border-radius: 2px;
 		display: inline-block;
 		height: 3px;
 		position: absolute;
 		width: 100%;
+        animation: change_icon 10s step-start infinite;
 	}
 	.burger_box .menu-icon_line--1 {
 		top: 2px;
@@ -166,7 +168,7 @@ a,
     a{
     color: #471b1b;
     font-family: "Dela Gothic One", system-ui;
-    font-size: large;
+    font-size: small;
     display: block;
     padding: 0;
     padding: 8px;
@@ -183,26 +185,34 @@ a,
    font-style: normal;
     font-size: xxx-large;
     color: #ff8616f5;
-    align-self: center;
-   margin-top: 400px;
-  
-   margin-bottom: 0%;
+   margin-top: 600px;
+   margin-bottom: 15px;
    animation: change_text 10s ease infinite;
+   
     }
 
 
  h5{
    font-family: "Zen Old Mincho", serif;
    font-weight: 400;
-  font-style: normal;
-   font-size: large;
+   font-style: normal;
+   font-size: x-large;
     color: rgb(240, 197, 148);
     align-self: center;
     margin-top: 2px;
+    padding-left: 0px;
     animation: change_text 10s ease infinite;
     }
 
+   
 
+    h1, h5{
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center; /* centers vertically */
+    flex-direction: column; /* stack the <h1> and <h5> vertically */
+   text-align: center;
+}
       
    @keyframes change_bg_image{
     0% {background-image: url(dromos.png);}
@@ -211,12 +221,19 @@ a,
 
     @keyframes change_nav_bar{
       0%{background-color: (216, 163, 98, 0.623);}
-      50%{background-color: rgb(255, 255, 255);}
+      50%{background-color: rgba(255, 255, 255, 0.418);}
       100%{background-color: (216, 163, 98, 0.623);}}
 
     @keyframes change_text{
       50%{ color: red;}
       100%{color: #ff8616f5;}}
+
+
+    @keyframes change_icon {
+        50%{ color: red;}
+        100%{color: rgb(248, 247, 247);}
+        
+    }
 
 </style>
 
